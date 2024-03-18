@@ -45,10 +45,12 @@ playBtn.addEventListener('click', function() {
         // La cella cliccata dall'utente si colora di blu
         square.addEventListener('click', function() {
             // Se il numero della cella cliccata è uguale ad un numero presente nell'array di bombe
-            if(i === randomNumber) {
+            if(bombsArray.includes(i)) {
                 alert('hai perso');
+                this.classList.add('dark-red');
+            } else {
+                this.classList.add('dark-blue');
             }
-            this.classList.add('dark-blue');
             console.log(i);
         });
         grid.append(square);
