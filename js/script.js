@@ -56,6 +56,9 @@ playBtn.addEventListener('click', function() {
             }
             console.log(i);
             scoreResult.innerHTML = score;
+            if(score >= 84) {
+                alert('YOU WON!!!!!!!')
+            }
         });
         grid.append(square);
     }
