@@ -85,6 +85,10 @@ main {
   background-color: darkred;
 }
 
+.disabled{
+  pointer-events: none;
+}
+
 /* ------------
     FOOTER
 ------------*/

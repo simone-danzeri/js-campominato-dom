@@ -52,7 +52,9 @@ playBtn.addEventListener('click', function() {
                 this.classList.add('dark-red');
             } else {
                 this.classList.add('light-blue');
+                this.classList.add('disabled');
                 score++;
+
             }
             console.log(i);
             scoreResult.innerHTML = score;
