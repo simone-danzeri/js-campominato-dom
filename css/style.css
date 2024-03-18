@@ -77,15 +77,15 @@ main {
   cursor: pointer;
 }
 
-.light-blue{
-    background-color: lightskyblue;
+.light-blue {
+  background-color: lightskyblue;
 }
 
-.dark-red{
+.dark-red {
   background-color: darkred;
 }
 
-.disabled{
+.disabled {
   pointer-events: none;
 }
 
