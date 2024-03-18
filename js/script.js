@@ -26,6 +26,16 @@ playBtn.addEventListener('click', function() {
     grid.innerHTML = '';
     // Mi creo variabile per il punteggio con valore iniziale a 0
     let score = 0;
+    // Mi creo array bombe vuoto
+    let bombsArray = [];
+    // Mi creo array di controllo per non avere due vole lo stesso numero corrispondente alla cella con la bomba
+    let blackList = [];
+    // Inserisco i 16 numeri random unici nell'array delle bombe
+    for(let i = 0; i < 16; i++) {
+        const randomNumber = getRandomUniqueNumber(1, 16, bombsArray);
+        bombsArray.push(randomNumber);
+        console.log(bombsArray);
+    }
     // Per 100 volte dovrò generare un elemento della griglia
     for (let i = 1; i <= 100; i++) {
         // Mi richiamo la funzione per generare un elemento della griglia
@@ -52,4 +62,33 @@ function squareGenerator(num) {
     newSquare.classList.add('square');
     newSquare.innerHTML = `<span>${num}</span>`;
     return newSquare;
+}
+
+// Mi genera un numero random tra un min ed un max non duplicato
+// min -> numero intero minimo
+// max -> numero intero massimo
+// blackList -> array di numeri che sono già presenti
+// return: un numero intero valido compreso tra min e max
+function getRandomUniqueNumber(min, max, blackList) {
+    // parte dal pressuposto che il numero 
+    // non sia valido
+    // se il numero generato random non è presente nella blacklist
+    // allora è valido
+    // return del numero valido
+    let numbIsValid = false;
+    let randomNumber;
+    while(!numbIsValid) {
+        randomNumber = getRndInteger(min, max);
+
+        if(!blackList.includes(randomNumber)) {
+            numbIsValid = true;
+        }
+    }
+
+    return randomNumber;
+}
+
+// Mi genera un numero random tra un min ed un max --> W3School
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
