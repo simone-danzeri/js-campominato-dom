@@ -1,0 +1,97 @@
+/* ------------
+    RESET
+------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------
+    HEADER
+------------*/
+
+.header-container {
+  height: 150px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-container-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-container-right {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  padding-left: 20px;
+}
+
+.logo img {
+  width: 80px;
+}
+
+#play-btn {
+  padding: 10px 22px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ------------
+    MAIN
+------------*/
+
+main {
+  background-color: aquamarine;
+  padding: 100px 0px;
+}
+
+#grid {
+  height: 800px;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.grid-border {
+  border: 2px solid black;
+}
+
+.square {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  background-color: aquamarine;
+  border: 2px solid black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dark-blue{
+    background-color: darkblue;
+}
+
+/* ------------
+    FOOTER
+------------*/
+
+footer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.credits h3 {
+  font-size: 18px;
+}
