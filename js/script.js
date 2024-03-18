@@ -15,11 +15,13 @@
 
 
 
-// Mi seleziono i due elementi del DOM che mi servono e li metto in una variabile
+// Mi seleziono i tre elementi del DOM che mi servono e li metto in una variabile
 const playBtn = document.querySelector('#play-btn');
 console.log(playBtn);
 const grid = document.querySelector('#grid');
 console.log(grid);
+let scoreResult = document.querySelector('#score');
+console.log(scoreResult);
 // Metto in ascolto il bottone del play
 playBtn.addEventListener('click', function() {
     // Svuoto la griglia prima del ciclo così da non avere una nuova griglia ogni volta che premo play
@@ -46,14 +48,14 @@ playBtn.addEventListener('click', function() {
         square.addEventListener('click', function() {
             // Se il numero della cella cliccata è uguale ad un numero presente nell'array di bombe
             if(bombsArray.includes(i)) {
-                alert('hai perso');
+                alert('BOOM! YOU LOST! Check at the end your total score');
                 this.classList.add('dark-red');
             } else {
                 this.classList.add('dark-blue');
-                score++
+                score++;
             }
             console.log(i);
-            console.log('il tuo punteggio è:', score);
+            scoreResult.innerHTML = score;
         });
         grid.append(square);
     }
