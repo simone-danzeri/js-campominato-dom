@@ -50,8 +50,10 @@ playBtn.addEventListener('click', function() {
                 this.classList.add('dark-red');
             } else {
                 this.classList.add('dark-blue');
+                score++
             }
             console.log(i);
+            console.log('il tuo punteggio è:', score);
         });
         grid.append(square);
     }
