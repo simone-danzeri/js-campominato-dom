@@ -35,6 +35,7 @@ playBtn.addEventListener('click', function() {
     for(let i = 0; i < 16; i++) {
         randomNumber = getRandomUniqueNumber(1, 100, bombsArray);
         bombsArray.push(randomNumber);
+        console.log(randomNumber);
     }
     console.log(bombsArray);
     // Per 100 volte dovrò generare un elemento della griglia
@@ -44,9 +45,9 @@ playBtn.addEventListener('click', function() {
         // La cella cliccata dall'utente si colora di blu
         square.addEventListener('click', function() {
             // Se il numero della cella cliccata è uguale ad un numero presente nell'array di bombe
-            // if(this === ) {
-
-            // }
+            if(i === randomNumber) {
+                alert('hai perso');
+            }
             this.classList.add('dark-blue');
             console.log(i);
         });
