@@ -30,18 +30,23 @@ playBtn.addEventListener('click', function() {
     let bombsArray = [];
     // Mi creo array di controllo per non avere due vole lo stesso numero corrispondente alla cella con la bomba
     let blackList = [];
+    let randomNumber;
     // Inserisco i 16 numeri random unici nell'array delle bombe
     for(let i = 0; i < 16; i++) {
-        const randomNumber = getRandomUniqueNumber(1, 16, bombsArray);
+        randomNumber = getRandomUniqueNumber(1, 100, bombsArray);
         bombsArray.push(randomNumber);
-        console.log(bombsArray);
     }
+    console.log(bombsArray);
     // Per 100 volte dovrò generare un elemento della griglia
     for (let i = 1; i <= 100; i++) {
         // Mi richiamo la funzione per generare un elemento della griglia
         let square = squareGenerator(i);
         // La cella cliccata dall'utente si colora di blu
         square.addEventListener('click', function() {
+            // Se il numero della cella cliccata è uguale ad un numero presente nell'array di bombe
+            // if(this === ) {
+
+            // }
             this.classList.add('dark-blue');
             console.log(i);
         });
