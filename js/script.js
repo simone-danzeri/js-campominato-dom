@@ -51,7 +51,7 @@ playBtn.addEventListener('click', function() {
                 alert('BOOM! YOU LOST! Check at the end your total score');
                 this.classList.add('dark-red');
             } else {
-                this.classList.add('dark-blue');
+                this.classList.add('light-blue');
                 score++;
             }
             console.log(i);
