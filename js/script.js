@@ -22,6 +22,8 @@ console.log(scoreResult);
 playBtn.addEventListener("click", function () {
   // Svuoto la griglia prima del ciclo così da non avere una nuova griglia ogni volta che premo play
   grid.innerHTML = "";
+  // Svuoto il contatore del punteggio prima del ciclo
+  scoreResult.innerHTML = "";
   // Mi creo variabile per il punteggio con valore iniziale a 0
   let score = 0;
   // Mi creo array bombe vuoto
